@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2019年を目指せ!!</title>
+	<meta name="description" content="いのししで走り抜きましょう">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+	
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	
+	<script src="enchant.js"></script>
+    <script src="main.js"></script>
+	
+    <style>
+      body {
+        padding: 0;
+        margin:  0;
+        background-color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
