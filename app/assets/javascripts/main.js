@@ -40,7 +40,7 @@ window.onload = function() {
             info.color = '#ffffff';
             info.x = 0;
             info.y = 242;
-            info.font = '14px sans-serif';
+            info.font = '20px sans-serif';
             scene.addChild(info);
 
 
@@ -129,8 +129,8 @@ window.onload = function() {
             var kumaDead = function() {
                 game_.pushScene(createGameoverScene(scroll));
 			};
-			
-			
+
+
 			var Goal = function() {
 				alert("ゴールおめでとう！メッセージがあります");
 				game_.pushScene(createGoalScene(scroll));
@@ -179,7 +179,7 @@ window.onload = function() {
                         kumaDead();
                     }
                 }
-					
+
 					if (scroll == 2030) {
 						Goal();
 					}
@@ -272,23 +272,23 @@ window.onload = function() {
             return scene;
 
 		};
-		
-		
+
+
 		/**
 		* ゴールシーン
 		*/
 		var createGoalScene = function(scroll) {
-			
+
 			var scene = new Scene();
-			
-			
+
+
 			var goalImage = new Sprite(320, 320);
 			goalImage.image = game_.assets['/goal.png'];
 			goalImage.x = 0;
 			goalImage.y = 0;
 			scene.addChild(goalImage);
-			
-			
+
+
 			var scoreInfoLabel = new Label('あけましておめでとうございます。<br>私、ジョーはITエンジニアとして<br>2020年より働く予定です。<br>モノづくりで世界をより良くしたい<br>という気持ちはずっと変わりません。<br> <br>このゲームと同じように猪突猛進で<br>周りを振り回してばかりの私ですが、<br>今後とも一緒に楽しい世界を<br>目指してくだされば幸いです。<br> <br>　　　　　　　ジョー');
 			scoreInfoLabel.width = 320;
 			scoreInfoLabel.textAlign = 'center';
@@ -298,12 +298,12 @@ window.onload = function() {
 			scoreInfoLabel.font = '17px sans-serif';
 			scoreInfoLabel.backgroundColor = 'rgba(0, 0, 0, 0.5)';
 			scene.addChild(scoreInfoLabel);
-			
-			
+
+
 			return scene;
-			
+
 		};
-		
+
 
         game_.replaceScene(createStartScene());
 
